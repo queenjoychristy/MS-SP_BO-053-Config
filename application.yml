@@ -7,6 +7,10 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${random.int}
 management:
+  endpoints:
+    web:
+      exposure:
+        include: health,env,metrics,beans,loggers,prometheus
   tracing:
     sampling:
       probability: 1.0
